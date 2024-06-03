@@ -1,0 +1,97 @@
+/* MovieDetailPage.style.css */
+.movie-detail-container {
+    display: flex;
+    flex-direction: row;
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .movie-poster {
+    max-width: 300px;
+    border-radius: 10px;
+    margin-right: 20px;
+  }
+  
+  .movie-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .movie-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .movie-tagline {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #ccc;
+    margin-bottom: 20px;
+  }
+  
+  .movie-overview {
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+  }
+  
+  .movie-genres {
+    margin: 10px 0;
+  }
+  
+  .genre-badge {
+    background-color: #f00;
+    color: #fff;
+    margin-right: 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .movie-details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: flex-start; /* 왼쪽 정렬을 위해 추가 */
+  }
+  
+  .movie-detail-item {
+    margin: 5px 0;
+  }
+  
+  .movie-detail-first {
+    display: flex;
+    align-items: center;
+    margin: 15px 5px;
+  }
+  
+  .movie-detail-item.first .badge {
+    margin-right: 10px;
+  }
+  
+  .movie-detail-label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .badge {
+    background-color: #f00;
+    color: #fff;
+    margin-right: 5px;
+    padding: 5px 5px;
+    border-radius: 5px;
+    margin-left: 5px;
+  }
+  
+  .badge.yellow {
+    background-color: yellow;
+    color: #000;
+  }
+  
+  .rate{
+    color: yellow;
+  }

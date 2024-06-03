@@ -1,0 +1,33 @@
+
+.navbar {
+    background-color: #000 !important; 
+  }
+  
+  .navbar-brand,
+  .nav-link {
+    color: #fff !important;
+  }
+  
+ 
+  .form-control {
+    background-color: #333;
+    color: #fff;
+    border: none;
+  }
+  
+  .form-control::placeholder {
+    color: #ccc; 
+  }
+  
+  .search-button {
+    background-color: #e50914 !important; 
+    color: #fff !important; 
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+    
+  .logo {
+    width: 100px;
+  }
+  
