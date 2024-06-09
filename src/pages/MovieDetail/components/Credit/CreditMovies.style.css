@@ -1,0 +1,46 @@
+.credit-container {
+    margin-top: 20px;
+  }
+  
+  .cast-list {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 10px;
+  }
+  
+  .cast-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+  }
+  
+  .cast-photo {
+    width: 138px;
+    height: 175px;
+    border-radius: 5px;
+  }
+  
+  .cast-info {
+    text-align: center;
+    margin-top: 5px;
+  }
+  
+  .cast-name {
+    font-weight: bold;
+  }
+  
+  .cast-character {
+    font-style: italic;
+  }
+  
+  .more-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: red;
+    text-decoration: none;
+  }
+  

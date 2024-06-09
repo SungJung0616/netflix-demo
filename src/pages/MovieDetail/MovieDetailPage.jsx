@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import Tab from './components/Tab/Tab';
 import "./MovieDetailPage.style.css";
+import CreditMovies from './components/Credit/CreditMovies';
 
 
 const MovieDetailPage = () => {
@@ -68,9 +69,10 @@ const MovieDetailPage = () => {
             <span className="badge">Revenue</span> ${data.revenue.toLocaleString()}
           </div>
         </div>
-      </div>
+      </div> 
      
     </div>
+       <CreditMovies id={id}/>
        <Tab id={id} />
     </div>
   );
