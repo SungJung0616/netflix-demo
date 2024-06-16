@@ -22,7 +22,7 @@
     opacity: 0;
     transition: opacity 0.5s;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     padding: 10px;
   }
 
@@ -86,4 +86,9 @@
   }
 
  
-
+  @media (max-width:480px){
+    .movie-card:hover{
+      transform: scale(1.1) translateZ(20px);
+      z-index:2;
+  } 
+}

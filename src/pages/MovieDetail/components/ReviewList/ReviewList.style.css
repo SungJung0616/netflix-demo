@@ -35,3 +35,20 @@
     text-decoration: underline;
   }
   
+  @media (max-width: 480px) {
+    .review-section {
+        padding: 10px;
+    }
+
+    .review-item {
+        padding: 5px;
+    }
+
+    .review-item h5 {
+        font-size: 1rem;
+    }
+
+    .review-item p {
+        font-size: 0.9rem;
+    }
+}

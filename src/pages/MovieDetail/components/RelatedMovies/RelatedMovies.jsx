@@ -5,11 +5,9 @@ import ReactPaginate from 'react-paginate';
 import { useRelatedMoviePageQuery } from '../../../../hooks/useRelatedMoviesPage';
 
 const RelatedMovies = ({id}) => {
-   
-    console.log("id", id)
+      
     const [page, setPage] = useState(1);
-    const {data,isLoading, isError, error } = useRelatedMoviePageQuery(id,page);
-      console.log("pagenation",data)
+    const {data,isLoading, isError, error } = useRelatedMoviePageQuery(id,page);     
     const handlePageClick = ({ selected }) => {
         setPage(selected + 1);
       };
@@ -36,7 +34,7 @@ const RelatedMovies = ({id}) => {
        <Container>
         <Row>
           {data?.results.map((movie, index) => (
-            <Col key={index} lg={2} xs={6} className="mb-4">
+            <Col key={index} lg={2} xs={12} className="mb-4 d-flex justify-content-center">
               <MovieCard movie={movie} />
             </Col>
           ))}

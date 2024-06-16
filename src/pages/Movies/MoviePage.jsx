@@ -86,7 +86,7 @@ const MoviePage = () => {
         <Col lg={8} xs={12}>
           <Row>
             {filteredResults?.map((movie, index) => (
-              <Col key={index} lg={4} xs={12}>
+              <Col key={index} lg={4} xs={12} className="mb-4 d-flex justify-content-center">
                 <MovieCard movie={movie} />
               </Col>
             ))}

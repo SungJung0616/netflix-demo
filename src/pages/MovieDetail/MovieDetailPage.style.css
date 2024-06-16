@@ -95,3 +95,42 @@
   .rate{
     color: yellow;
   }
+
+  @media (max-width: 480px) {
+    .movie-detail-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .movie-poster {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .movie-info {
+        width: 100%;
+    }
+    .movie-title {
+        font-size: 1.5rem;
+    }
+    .movie-tagline {
+        font-size: 1rem;
+    }
+    .movie-overview {
+        margin: 10px 0;
+        padding: 5px 0;
+    }
+    .movie-detail-item {
+        font-size: 0.8rem;
+    }
+    .movie-detail-first {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .movie-detail-item.first .badge {
+        margin-right: 5px;
+    }
+    .badge {
+        font-size: 0.8rem;
+        padding: 3px 5px;
+    }
+  }

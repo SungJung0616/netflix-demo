@@ -23,3 +23,14 @@
 .banner-text-area > *{
     z-index: 2;
 }
+
+@media (max-width: 768px) {
+    .banner {
+        height: 50vh;
+    }
+    
+    .banner-text-area {
+        display: none;
+    }
+}
+

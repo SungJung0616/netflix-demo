@@ -31,4 +31,22 @@
     display: flex;
     justify-content: center;
   }
+
+  @media (max-width: 480px) {
+    .tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .tab {
+        margin-bottom: 10px;
+        width: 90%;
+        text-align: center;
+    }
+  
+    .tab-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
   
