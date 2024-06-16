@@ -3,11 +3,9 @@ import { useCreditMoviesQuery } from '../../../../hooks/useCreditMovie';
 import { Spinner, Alert } from 'react-bootstrap';
 import './CreditMovies.style.css'
 
-const CreditMovies = ({id}) => {
-    console.log("creditMovies")
+const CreditMovies = ({id}) => {    
     const { data, isLoading, isError, error } = useCreditMoviesQuery(id);
-    const [showAll, setShowAll] = useState(false);
-    console.log("creditmovies data",data)
+    const [showAll, setShowAll] = useState(false);   
 
     if (isLoading) {
         return (
@@ -23,6 +21,10 @@ const CreditMovies = ({id}) => {
     
     if (isError) {
       return <Alert variant="danger">{error.message}</Alert>;
+    }
+
+    if (!data || !data.cast || !data.crew) {
+      return <div>No credit information available</div>;
     }
 
     const director = data.crew.find(member => member.job === 'Director');

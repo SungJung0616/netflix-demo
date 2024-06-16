@@ -1,59 +1,95 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSearchMoviesQuery } from '../../hooks/useSearchMovie';
 import { useSearchParams } from 'react-router-dom';
 import { Alert, Col, Container, Row, Spinner } from 'react-bootstrap';
 import MovieCard from '../../common/MovieCard/MovieCard';
 import ReactPaginate from 'react-paginate';
+import SortedResults from './components/SortedResult/SortedResult';
+import SelectedGenre from './components/SelectedGenre/SelectedGenre';
 
 const MoviePage = () => {
-  // moviepage로 올수 있는 경로는 2가지 
-  //1. nav바에서 클릭해서 오는경우 => popular movie 보여주기
-  //2. 키워드를 클릭해서 오는경우.=> keyword와 관련있는 영화 보여주기
-
-  //페이지 네이션 설치
-  //page state만들기
-  //페이지 네이션 클릭할때마다 page 바꿔주기
-  //page 값이 바뀔때 마다 useSearchMovie 에 page까지 넣어서 fetch
-  const [page, setPage] = useState(1)
+  const [page, setPage] = useState(1);
   const [query] = useSearchParams();
+  const [sortOrder, setSortOrder] = useState('popularity.desc');
+  const [selectedGenre, setSelectedGenre] = useState(null);
   const keyword = query.get("q");
-  const {data,isLoading, isError, error } = useSearchMoviesQuery({keyword,page});
-  console.log("result", data);
+  const { data, isLoading, isError, error } = useSearchMoviesQuery({ keyword, page });
 
-  const handlePageClick = ({selected}) => {
-    setPage(selected+1)
-  }
+  const handlePageClick = ({ selected }) => {
+    setPage(selected + 1);
+  };
 
-  if(isLoading){
-    return(
+  useEffect(() => {    
+    setSortOrder('popularity.desc');
+    setSelectedGenre(null);
+  }, []);
+
+  useEffect(() => {
+  }, [page, sortOrder, selectedGenre]);
+
+  const handleSortChange = (order) => {
+    setSortOrder(order);
+  };
+
+  const handleGenreChange = (genreId) => {
+    setSelectedGenre(genreId);
+  };
+
+  const sortedResults = data?.results.slice().sort((a, b) => {
+    switch (sortOrder) {
+      case 'popularity.desc':
+        return b.popularity - a.popularity;
+      case 'popularity.asc':
+        return a.popularity - b.popularity;
+      case 'release_date.desc':
+        return new Date(b.release_date) - new Date(a.release_date);
+      case 'release_date.asc':
+        return new Date(a.release_date) - new Date(b.release_date);
+      case 'vote_average.desc':
+        return b.vote_average - a.vote_average;
+      case 'vote_average.asc':
+        return a.vote_average - b.vote_average;
+      default:
+        return 0;
+    }
+  });
+
+  const filteredResults = selectedGenre
+    ? sortedResults?.filter((movie) => movie.genre_ids.includes(selectedGenre))
+    : sortedResults;
+
+  if (isLoading) {
+    return (
       <div className='spinner-area'>
-        <Spinner 
+        <Spinner
           animation="border"
           variant='danger'
-          style={{width: "5rem", height: "5rem"}}
+          style={{ width: "5rem", height: "5rem" }}
         />
       </div>
-    )
-  }
-  if(isError){
-    
-    <Alert variant="danger">{error.message}</Alert>
+    );
   }
 
-  return(
+  if (isError) {
+    return <Alert variant="danger">{error.message}</Alert>;
+  }
+
+  return (
     <Container>
       <Row>
         <Col lg={4} xs={12}>
-          {" "}
-          필터{" "}
+        <div style={{ marginBottom: '15px' }}>
+          <SortedResults sortOrder={sortOrder} handleSortChange={handleSortChange} />
+          </div>
+          <SelectedGenre selectedGenre={selectedGenre} handleGenreChange={handleGenreChange} />
         </Col>
         <Col lg={8} xs={12}>
           <Row>
-          {data?.results.map((movie,index)=>
-          <Col key={index} lg={4} xs={12}>
-            <MovieCard movie={movie} />
-          </Col>
-          )} 
+            {filteredResults?.map((movie, index) => (
+              <Col key={index} lg={4} xs={12}>
+                <MovieCard movie={movie} />
+              </Col>
+            ))}
           </Row>
           <ReactPaginate
             nextLabel="next >"
@@ -74,8 +110,8 @@ const MoviePage = () => {
             containerClassName="pagination"
             activeClassName="active"
             renderOnZeroPageCount={null}
-            forcePage={page-1}
-      />
+            forcePage={page - 1}
+          />
         </Col>
       </Row>
     </Container>

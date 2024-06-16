@@ -1,0 +1,41 @@
+#dropdown-basic {
+    background-color: black;
+    color: #fff;
+    border-color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+  
+  #dropdown-basic:focus {
+    box-shadow: none;
+  }
+  
+  /* Dropdown menu */
+  .dropdown-menu {
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .dropdown-menu .dropdown-item {
+    color: #fff;
+    padding: 10px 15px;
+  }
+  
+  .dropdown-menu .dropdown-item:hover,
+  .dropdown-menu .dropdown-item:focus {
+    background-color: black;
+    color: #fff;
+  }
+  
+  /* Apply specific styles to the dropdown when it is open */
+  .dropdown-menu.show {
+    display: block;
+    opacity: 1;
+  }
+  
+  /* Add some space below the dropdown for margin */
+  #sorted-results-dropdown {
+    margin-bottom: 15px;
+  }

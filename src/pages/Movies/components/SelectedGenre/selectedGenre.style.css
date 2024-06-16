@@ -1,0 +1,37 @@
+.genre-container {
+    text-align:left;
+    padding: 20px;
+  }
+  
+  .genre-container h3 {
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  .genre-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .genre-button {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 8px 16px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .genre-button:hover {
+    transform: scale(1.1);
+  }
+  
+  .genre-button.selected {
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  }
+  

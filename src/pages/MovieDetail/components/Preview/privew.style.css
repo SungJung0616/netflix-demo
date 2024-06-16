@@ -1,0 +1,14 @@
+
+  .modal-body-custom {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    background-size: cover;
+    
+  }
+  
+  .custom-button {
+    background-color: red;
+    border-color: red;
+  }
+  

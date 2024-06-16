@@ -7,11 +7,12 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 import Tab from './components/Tab/Tab';
 import "./MovieDetailPage.style.css";
 import CreditMovies from './components/Credit/CreditMovies';
+import Preview from './components/Preview/Privew'
 
 
 const MovieDetailPage = () => {
   const { id } = useParams();
-  const { data, isLoading, isError, error } = useDetailMoviesQuery(id);
+  const { data, isLoading, isError, error } = useDetailMoviesQuery(id);  
   
   if (isLoading) {
     return (
@@ -73,6 +74,7 @@ const MovieDetailPage = () => {
      
     </div>
        <CreditMovies id={id}/>
+       <Preview id={id} />
        <Tab id={id} />
     </div>
   );

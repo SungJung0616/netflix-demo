@@ -8,9 +8,7 @@ import { useRelatedMovieQuery } from '../../../../hooks/useRelatedMovies';
 const Tab = ({ id }) => {
   const [activeTab, setActiveTab] = useState('reviews');
   const { data: review, isLoading: isReviewLoading } = useReviewMovieQuery(id);
-  const { data: related, isLoading: isRelatedLoading } = useRelatedMovieQuery(id);
-  console.log(review)
-  console.log(related)
+  const { data: related, isLoading: isRelatedLoading } = useRelatedMovieQuery(id); 
   return (
     <div className="tabs-container">
       <div className="tabs">
