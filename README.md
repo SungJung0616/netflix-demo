@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# 🎬 Find Your Favorite Movies at a Glance with SUNGFLIX
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![image](./public/image/main.png)
 
-## Available Scripts
+> <br>
 
-In the project directory, you can run:
+**SUNGFLIX** is a website where you can view various movie information at a glance.
 
-### `npm start`
+> <br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Deployment Address
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> <div>Frontend Server: https://sj-sungflix-demo.netlify.app/</div>
 
-### `npm test`
+## Project Introduction
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**SungFlix** is designed to provide basic information about movies before you watch them.
 
-### `npm run build`
+- Helps users easily search for movies.
+- Provides detailed information and related movies.
+- Plans to integrate with movie ticketing sites in the future.
+  <br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Developer
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+                     Sung Jung                      |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| :-----------------------------------------------------------: |
+| [@SungJung0616](https://github.com/SungJung0616) |
+<br>
 
-### `npm run eject`
+## 📚 STACKS
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Environment
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white"> 
+<img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Config
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<img src="https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white">
 
-## Learn More
+### Development
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"> 
+<img src="https://img.shields.io/badge/bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white"> 
+<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<img src="https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7">
+<br>
 
-### `npm run build` fails to minify
+## Adopted Development Technologies and Branch Strategy
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### React
+
+**React**
+
+- Considered future maintenance and
