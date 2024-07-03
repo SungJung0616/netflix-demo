@@ -23,10 +23,10 @@
 
 ## Developer
 
-                     Sung Jung                      |
+| <img src="https://avatars.githubusercontent.com/u/35758170?v=4" width="150" height="150"/> |
+| :----------------------------------------------------------------------------------------: |
+|              Sung U Jung<br/>[@SungJung0616](https://github.com/SungJung0616)              |
 
-| :-----------------------------------------------------------: |
-| [@SungJung0616](https://github.com/SungJung0616) |
 <br>
 
 ## 📚 STACKS
@@ -49,8 +49,6 @@
 <br>
 
 ## Adopted Development Technologies and Branch Strategy
-
-### React
 
 **React**
 
@@ -96,7 +94,7 @@
 
 ### Casting & Review
 
-![image](./public/image/cast_review.png)
+![image](./public/image/cast_reviw.png)
 
 <br>
 
