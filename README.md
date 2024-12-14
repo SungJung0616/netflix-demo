@@ -55,7 +55,7 @@
 - Considered future maintenance and
 - Saved resources by componentizing frequently used parts like user banners, top, and bottom banners.
 
-**Redux Query**
+**React Query**
 
 - Efficient state management and API interaction.
 
